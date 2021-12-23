@@ -1,0 +1,53 @@
+﻿@model borrowAndLend.Models.Item
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <h2>Add New Item</h2>
+            </div>
+            <form method="post" asp-action="Update">
+                <input asp-for="Id" hidden />
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="ItemName" class=""></label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Borrower" class=""></label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Lender" class=""></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <input asp-for="ItemName" class="form-control" />
+                        <span asp-validation-for="ItemName" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <input asp-for="Borrower" class="form-control" />
+                        <span asp-validation-for="Borrower" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <input asp-for="Lender" class="form-control" />
+                        <span asp-validation-for="Lender" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 offset-4 mt-3">
+                        <input type="submit" class="w-25 btn btn-info btn-lg" value="Update" />
+                        <a asp-controller="Item" asp-action="Index" class="w-25 btn btn-danger btn-lg">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+

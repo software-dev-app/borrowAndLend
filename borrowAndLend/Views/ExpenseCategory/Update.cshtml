@@ -1,0 +1,33 @@
+﻿@model borrowAndLend.Models.ExpenseCategory
+
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <h2 class="card-title">Add New Categories</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <form method="post" asp-action="Update">
+                    <input asp-for="Id" hidden />
+                    <div class="form-group">
+                        <label asp-for="CategoryType"></label>
+                        <input asp-for="CategoryType" class="form-control"  />
+                        <span asp-validation-for="CategoryType" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <input type="submit" class="btn btn-info" value="Update" />
+                        </div>
+                        <div class="col-8 text-right">
+                            <a asp-controller="ExpenseCategory" asp-action="Index" class="btn btn-info">Back</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

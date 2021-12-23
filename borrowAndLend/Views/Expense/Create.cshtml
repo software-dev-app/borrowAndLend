@@ -1,0 +1,40 @@
+﻿@model borrowAndLend.Models.Expense
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <h5 class="card-title">Add New Expense</h5>
+                </div>
+            </div>
+            <div class="col-12">
+                <form method="post" asp-action="Create">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label asp-for="ExpenseName"></label>
+                                <input asp-for="ExpenseName" class="form-control" />
+                                <span asp-validation-for="ExpenseName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label asp-for="Amount"></label>
+                                <input asp-for="Amount" class="form-control" />
+                                <span asp-validation-for="Amount" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 text-right">
+                            <input type="submit" class="w-25 btn btn-info" value="Create" />
+                        </div>
+                        <div class="col-6">
+                            <a asp-controller="Expense" asp-action="Index" class="w-25 btn btn-primary">Back</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+

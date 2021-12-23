@@ -1,0 +1,38 @@
+﻿@model borrowAndLend.Models.Expense
+
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-6">
+                <h5 class="card-title">Delete Expense</h5>
+            </div>
+        </div>
+        <div class="col-12">
+            <form method="post" asp-action="DeletePost">
+                <input asp-for="Id" hidden />
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="ExpenseName"></label>
+                            <input asp-for="ExpenseName" disabled class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Amount"></label>
+                            <input asp-for="Amount" disabled class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-right">
+                        <input type="submit" class="w-25 btn btn-danger" value="Delete" />
+                    </div>
+                    <div class="col-6">
+                        <a asp-controller="Expense" asp-action="Index" class="w-25 btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
